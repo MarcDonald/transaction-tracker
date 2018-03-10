@@ -1,17 +1,21 @@
 package main;
 
+import menu.MainMenu;
+
 /**
  * //TODO documentation
  * Main Class
  */
 public class Main
 {
+    public static Transaction[] transactions = new Transaction[100];
+
     public static void main(String args[])
     {
-        Menu menu = new Menu();
+        MainMenu mainMenu = new MainMenu();
 
         loadData();
-        menu.printMainMenu();
+        mainMenu.printMainMenu();
     }
 
     private static void loadData()

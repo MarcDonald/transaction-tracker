@@ -7,7 +7,7 @@ public class Test
     public Test()
     {}
 
-    public static void ckEqualsS(String message, String expected, String actual)
+    public void ckEqualsS(String message, String expected, String actual)
     {
         if(expected.equals(actual))
             System.out.println("PASS: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
@@ -15,7 +15,7 @@ public class Test
             System.out.println("FAIL: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
     }
 
-    public static void ckEqualsI(String message, int expected, int actual)
+    public void ckEqualsI(String message, int expected, int actual)
     {
         if(expected == actual)
             System.out.println("PASS: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
@@ -23,7 +23,7 @@ public class Test
             System.out.println("FAIL: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
     }
 
-    public static void ckEqualsD(String message, double expected, double actual)
+    public void ckEqualsD(String message, double expected, double actual)
     {
         if(expected == actual)
             System.out.println("PASS: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
@@ -31,7 +31,7 @@ public class Test
             System.out.println("FAIL: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
     }
 
-    public static void ckEqualsB(String message, boolean expected, boolean actual)
+    public void ckEqualsB(String message, boolean expected, boolean actual)
     {
         if(expected == actual)
             System.out.println("PASS: " + message + ". Expected value was " + expected + " and the actual value was " + actual);

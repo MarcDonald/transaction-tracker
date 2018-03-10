@@ -5,18 +5,38 @@ package main;
 public class Transaction
 {
     private int date;
-    private Category category;
+    private int category;
     private String recipient;
     private double amount;
 
-    public Transaction(String date, Category category, String recipient, double amount)
+    public Transaction(String date, int category, String recipient, double amount)
     {
         this.category = category;
         this.recipient = recipient;
         this.amount = amount;
 
-        //TODO Convert date from dd/mm/yyyy to yyymmdd
+        String day = extractDay(date);
+        String month = extractMonth(date);
+        String year = extractYear(date);
 
+        //Combines the strings to be in the yyyymmdd format and stores that as an integer
+        String formattedDateString = year + month + day;
+        this.date = Integer.parseInt(formattedDateString);
+    }
+
+    private String extractDay(String date)
+    {
+        return date.substring(0, 2);
+    }
+
+    private String extractMonth(String date)
+    {
+        return date.substring(3, 5);
+    }
+
+    private String extractYear(String date)
+    {
+        return date.substring(6, 10);
     }
 
     public int getDate()
@@ -24,7 +44,7 @@ public class Transaction
         return date;
     }
 
-    public Category getCategory()
+    public int getCategory()
     {
         return category;
     }

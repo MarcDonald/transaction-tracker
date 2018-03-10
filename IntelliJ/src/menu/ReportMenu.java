@@ -1,98 +1,25 @@
-package main;
+package menu;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/** User interface */
+/** Report Menu User Interface */
 
-public class Menu
+public class ReportMenu
 {
-    private boolean optionChosen;
-
-    public Menu()
-    {}
-
-    /**
-     * Prints the main menu to the console
-     */
-    public void printMainMenu()
-    {
-        this.optionChosen = false;
-
-        //Repeats until the user enters a valid option
-        while(!this.optionChosen)
-        {
-            print("Please enter the number which correlates to the action you wish to perform");
-            print("1 - Add a New Entry");
-            print("2 - View a Report");
-
-            Scanner sc = new Scanner(System.in);
-
-            //Gets the user's input and handles it appropriately
-            mainMenuInputHandler(sc);
-        }
-    }
-
-    /**
-     * Takes the user's input, if it's valid will perform the appropriate action, otherwise prints an error and reprints
-     * the main menu
-     * @param sc Scanner to use
-     */
-    private void mainMenuInputHandler(Scanner sc)
-    {
-        int selectedOption;
-
-        try
-        {
-            selectedOption = sc.nextInt();
-
-            if(selectedOption == 1 || selectedOption == 2)
-            {
-                this.optionChosen = true;
-                performMainMenuAction(selectedOption);
-                print("");
-            }else
-            {
-                print("ERROR: Please enter a valid option");
-                print("");
-            }
-        } catch(InputMismatchException e)
-        {
-            e.getStackTrace();
-            print("ERROR: Please enter a valid option");
-            print("");
-        }
-    }
-
-    /**
-     * Prints either the new transaction menu or the report menu depending on what the user chose
-     * @param option The option the user has chosen
-     */
-    private void performMainMenuAction(int option)
-    {
-        if(option == 1)
-            printTransactionMenu();
-        else if(option == 2)
-            printReportMenu();
-    }
-
-    /**
-     * Guides the user through adding a new transaction
-     */
-    private void printTransactionMenu()
-    {
-        //TODO
-    }
+    boolean optionChosen;
 
     /**
      * Allows the user to select the type of report they would like to print
      */
-    private void printReportMenu()
+    public void printReportMenu()
     {
         this.optionChosen = false;
 
         while(!this.optionChosen)
         {
+            print("");
+            print("REPORT MENU");
             print("Please enter the number which correlates to the report you wish to generate");
             print("1 - The total amount of money spent between two dates");
             print("2 - The amount spent on a given category between two dates");
@@ -129,7 +56,7 @@ public class Menu
                 print("ERROR: Please enter a valid option");
                 print("");
             }
-        } catch(InputMismatchException e)
+        }catch(InputMismatchException e)
         {
             e.getStackTrace();
             print("ERROR: Please enter a valid option");
@@ -178,7 +105,8 @@ public class Menu
             {
                 this.optionChosen = true;
                 print("");
-                printMainMenu();
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.printMainMenu();
                 break;
             }
             default:
