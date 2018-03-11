@@ -13,11 +13,13 @@ public class TransactionTests
         runTests();
     }
 
+    /** Runs all Transaction tests */
     private static void runTests()
     {
         normalEntry();
     }
 
+    /** Test for normal entry. Tests date reformatting and storage ability*/
     private static void normalEntry()
     {
         Transaction transaction = new Transaction("03/12/1998", 1, "Stephen", 250.50);

@@ -34,36 +34,43 @@ public class Transaction
         this.date = Integer.parseInt(formattedDate);
     }
 
+    /** Extracts the day from an unformatted date */
     private String extractDay(String date)
     {
         return date.substring(0, 2);
     }
 
+    /** Extracts the month from an unformatted date */
     private String extractMonth(String date)
     {
         return date.substring(3, 5);
     }
 
+    /** Extracts the year from an unformatted date */
     private String extractYear(String date)
     {
         return date.substring(6, 10);
     }
 
+    /** @return Date of the transaction */
     public int getDate()
     {
         return date;
     }
 
+    /** @return Category of the transaction */
     public int getCategory()
     {
         return category;
     }
 
+    /** @return Recipient of the transaction */
     public String getRecipient()
     {
         return recipient;
     }
 
+    /** @return Amount of the transaction */
     public double getAmount()
     {
         return amount;

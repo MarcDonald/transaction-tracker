@@ -9,9 +9,7 @@ public class ReportMenu
 {
     private boolean optionChosen;
 
-    /**
-     * Allows the user to select the type of report they would like to print
-     */
+    /** Allows the user to select the type of report they would like to print */
     public void printReportMenu()
     {
         this.optionChosen = false;

@@ -14,9 +14,7 @@ public class MainMenu
     public MainMenu()
     {}
 
-    /**
-     * Prints the main menu to the console
-     */
+    /** Prints the main menu to the console */
     public void printMainMenu()
     {
         this.optionChosen = false;
