@@ -13,11 +13,10 @@ public class TransactionMenu
 {
     private int category;
     private double amount;
+    private String name;
     private boolean optionChosen;
 
-    /**
-     * Guides the user through adding a new transaction
-     */
+    /** Guides the user through adding a new transaction */
     public void printTransactionMenu()
     {
         Scanner sc = new Scanner(System.in);
@@ -31,34 +30,29 @@ public class TransactionMenu
         promptCategory();
 
         print("");
-        print("Please enter the name of the recipient");
-        //Skips to the next line of user input
-        sc.nextLine();
-        //Stores the whole line as the name (so that there can be spaces e.g. John Smith)
-        String name = sc.nextLine();
+        promptName();
 
         print("");
         promptAmount();
 
-        confirmInfoAndStore(date, name);
+        confirmInfoAndStore(date);
     }
 
     /**
      * Prints the information the user entered, and stores the transaction in the next available slot in the array, then
      * returns to main menu
      * @param date Date of the transaction
-     * @param name Name of the recipient
      */
-    private void confirmInfoAndStore(String date, String name)
+    private void confirmInfoAndStore(String date)
     {
         print("");
         print("New transaction stored with the following details:");
         print("Date: " + date);
         print("Category: " + this.category);
-        print("Recipient: " + name);
+        print("Recipient: " + this.name);
         print("Amount: " + this.amount);
 
-        Transaction transaction = new Transaction(date, this.category, name, this.amount);
+        Transaction transaction = new Transaction(date, this.category, this.name, this.amount);
 
         //Add the transaction to the next available slot in the array
         for(int i = 0; i < Main.transactions.length; i++)
@@ -80,9 +74,7 @@ public class TransactionMenu
         mainMenu.printMainMenu();
     }
 
-    /**
-     * Prints the category menu and launches the input handler
-     */
+    /** Prints the category menu and launches the input handler */
     private void promptCategory()
     {
         this.optionChosen = false;
@@ -138,9 +130,7 @@ public class TransactionMenu
         }
     }
 
-    /**
-     * Prompts the user to enter an amount for the transaction and launches the input handler
-     */
+    /** Prompts the user to enter an amount for the transaction and launches the input handler */
     private void promptAmount()
     {
         this.optionChosen = false;
@@ -172,6 +162,42 @@ public class TransactionMenu
         {
             e.getStackTrace();
             print("ERROR: Please enter a valid option");
+            print("");
+        }
+    }
+
+    /** Prompts the user to enter a recipient for the transaction and launches the input handler */
+    private void promptName()
+    {
+        this.optionChosen = false;
+
+        while(!this.optionChosen)
+        {
+            print("Please enter the name of the recipient");
+
+            Scanner sc = new Scanner(System.in);
+            nameInputHandler(sc);
+        }
+    }
+
+    /**
+     * Takes the user's input, if it's non-empty will set the name to the input, otherwise prints an error and asks the
+     * user to re-enter the name
+     * @param sc Scanner to use
+     */
+    private void nameInputHandler(Scanner sc)
+    {
+        //Stores the whole line as the name (so that there can be spaces e.g. John Smith)
+        String name = sc.nextLine().trim();
+
+        //Makes sure the name entered is non-empty
+        if(!name.equals(""))
+        {
+            this.name = name;
+            this.optionChosen = true;
+        }else
+        {
+            print("ERROR: Please enter a valid name");
             print("");
         }
     }
