@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ReportMenu
 {
-    boolean optionChosen;
+    private boolean optionChosen;
 
     /**
      * Allows the user to select the type of report they would like to print

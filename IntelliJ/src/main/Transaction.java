@@ -9,6 +9,7 @@ public class Transaction
     private String recipient;
     private double amount;
 
+    /** Constructor for user entry where the date is in the form dd/mm/yyy */
     public Transaction(String date, int category, String recipient, double amount)
     {
         this.category = category;
@@ -22,6 +23,15 @@ public class Transaction
         //Combines the strings to be in the yyyymmdd format and stores that as an integer
         String formattedDateString = year + month + day;
         this.date = Integer.parseInt(formattedDateString);
+    }
+
+    /** Constructor for when the date is correctly formatted in the form yyyymmdd */
+    public Transaction(int category, String recipient, double amount, String formattedDate)
+    {
+        this.category = category;
+        this.recipient = recipient;
+        this.amount = amount;
+        this.date = Integer.parseInt(formattedDate);
     }
 
     private String extractDay(String date)
