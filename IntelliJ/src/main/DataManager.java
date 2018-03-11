@@ -1,19 +1,20 @@
 package main;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
-/** Loads data and stores data to a text file*/
+/** Loads data from and stores data to a text file*/
 
 public class DataManager
 {
     private Scanner in = null;
+    private PrintWriter out = null;
     private String[] records = new String[100];
     private String date;
     private int category;
     private String name;
     private double amount;
+    private File file = new File("src/resources/TransactionDetails.txt");
 
     public DataManager()
     {}
@@ -30,7 +31,12 @@ public class DataManager
     /** Stores data from the program into a text file */
     public void storeData()
     {
+        instantiateScanner();
+        instantiatePrintWriter();
+        storeNewRecordsInFile();
 
+        out.close();
+        in.close();
     }
 
     /** Instantiates the 'in' scanner with the file containing the stored information */
@@ -38,8 +44,7 @@ public class DataManager
     {
         try
         {
-            File file = new File("src/resources/TransactionDetails.txt");
-            this.in = new Scanner(file);
+            this.in = new Scanner(this.file);
         }catch(FileNotFoundException e)
         {
             e.getStackTrace();
@@ -54,6 +59,7 @@ public class DataManager
     {
         while(in.hasNextLine())
         {
+            //Finds the next available slot in the records array to store the information
             for(int i = 0; i < records.length; i++)
             {
                 if(records[i] == null)
@@ -149,5 +155,47 @@ public class DataManager
             }
         }
         return commaIndex;
+    }
+
+    /** Instantiates the PrintWriter using the TransactionsDetails.txt file */
+    private void instantiatePrintWriter()
+    {
+        try
+        {
+            this.out = new PrintWriter(this.file);
+        }catch(Exception e)
+        {
+            e.getMessage();
+        }
+    }
+
+    /** Creates a transaction in the format required for the text file */
+    private String createRecord(Transaction transaction)
+    {
+        int dateI = transaction.getDate();
+        int categoryI = transaction.getCategory();
+        String name = transaction.getRecipient().trim();
+        double amountD = transaction.getAmount();
+
+        //Convert all to strings
+        String dateS = Integer.toString(dateI).trim();
+        String categoryS = Integer.toString(categoryI).trim();
+        String amountS = Double.toString(amountD).trim();
+
+        //Create record in the form required for the text file
+        return dateS + "," + categoryS + "," + name + "," + amountS;
+    }
+
+    /** Stores all records in the file */
+    private void storeNewRecordsInFile()
+    {
+        for(int i = 0; i < Main.transactions.length; i++)
+        {
+            if(Main.transactions[i] != null)
+            {
+                String record = createRecord(Main.transactions[i]);
+                out.println(record);
+            }
+        }
     }
 }

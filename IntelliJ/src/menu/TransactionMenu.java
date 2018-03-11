@@ -1,5 +1,6 @@
 package menu;
 
+import main.DataManager;
 import main.Main;
 import main.Transaction;
 
@@ -68,6 +69,10 @@ public class TransactionMenu
                 break;
             }
         }
+
+        //Store new information
+        DataManager dataManager = new DataManager();
+        dataManager.storeData();
 
         //Go back to the main menu
         print("");
