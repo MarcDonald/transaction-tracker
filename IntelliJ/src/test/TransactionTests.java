@@ -41,7 +41,7 @@ public class TransactionTests
         Transaction transaction = new Transaction(1, "Stephen", 250.50, "19981203");
 
         test.ckEqualsS("Date: ", "19981203", Integer.toString(transaction.getDate()));
-        test.ckEqualsI("Cateogory: ", 1, transaction.getCategory());
+        test.ckEqualsI("Category: ", 1, transaction.getCategory());
         test.ckEqualsS("Recipient: ", "Stephen", transaction.getRecipient());
         test.ckEqualsD("Amount: ", 250.50, transaction.getAmount());
         System.out.print("");
