@@ -27,7 +27,8 @@ public class Transaction
         this.date = Integer.parseInt(formattedDate);
     }
 
-    public int convertDateToStorage(String userInputtedDate)
+    /** Converts the user inputted date (dd/mm/yyyy) to the form yyyymmdd for storage */
+    public static int convertDateToStorage(String userInputtedDate)
     {
         String day = extractDateFromUserInput(userInputtedDate);
         String month = extractMonthFromUserInput(userInputtedDate);
@@ -37,7 +38,15 @@ public class Transaction
         return Integer.parseInt(year + month + day);
     }
 
-    public String convertDateToUserReadable(String storedDate)
+    /** Converts the stored date (yyyymmdd) to the form dd/mm/yyyy for user readability */
+    public static String convertDateToUserReadable(int storedDate)
+    {
+        String storedDateString = Integer.toString(storedDate);
+        return convertDateToUserReadable(storedDateString);
+    }
+
+    /** Converts the stored date (yyyymmdd) to the form dd/mm/yyyy for user readability */
+    public static String convertDateToUserReadable(String storedDate)
     {
         String year = extractYearFromStoredDate(storedDate);
         String month = extractMonthFromStoredDate(storedDate);
@@ -48,37 +57,37 @@ public class Transaction
     }
 
     /** Extracts the day from an unformatted date */
-    private String extractDateFromUserInput(String date)
+    private static String extractDateFromUserInput(String date)
     {
         return date.substring(0, 2);
     }
 
     /** Extracts the month from an unformatted date */
-    private String extractMonthFromUserInput(String date)
+    private static String extractMonthFromUserInput(String date)
     {
         return date.substring(3, 5);
     }
 
     /** Extracts the year from an unformatted date */
-    private String extractYearFromUserInput(String date)
+    private static String extractYearFromUserInput(String date)
     {
         return date.substring(6, 10);
     }
 
     /** Extracts the year from a formatted date */
-    private String extractYearFromStoredDate(String date)
+    private static String extractYearFromStoredDate(String date)
     {
         return date.substring(0,4);
     }
 
     /** Extracts the month from a formatted date */
-    private String extractMonthFromStoredDate(String date)
+    private static String extractMonthFromStoredDate(String date)
     {
         return date.substring(4,6);
     }
 
     /** Extracts the day from a formatted date */
-    private String extractDayFromStoredDate(String date)
+    private static String extractDayFromStoredDate(String date)
     {
         return date.substring(6,8);
     }

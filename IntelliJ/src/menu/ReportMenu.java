@@ -1,5 +1,8 @@
 package menu;
 
+import main.Report;
+import main.Transaction;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -63,47 +66,72 @@ public class ReportMenu
     }
 
     /**
-     * Takes the appropriate action depending on what the user selected
+     * Takes the appropriate action depending on what the user selected then returns to the main menu
      * @param selectedOption The option the user selected
      */
     private void performReportMenuOption(int selectedOption)
     {
-        //TODO Take appropriate action
+        Report report = new Report();
+        MainMenu mainMenu = new MainMenu();
+
         switch(selectedOption)
         {
             case 1:
             {
+                //Stops the while loop
                 this.optionChosen = true;
+                //Asks the user for the parameters then creates the report
                 print("");
-                print("Total spent");
+                int date1 = askForDate(1);
+                int date2 = askForDate(2);
+                report.totalSpent(date1, date2);
+
+                //Returns to main menu
+                print("");
+                mainMenu.printMainMenu();
                 break;
             }
             case 2:
             {
                 this.optionChosen = true;
                 print("");
-                print("Total for one category");
+                int date1 = askForDate(1);
+                int date2 = askForDate(2);
+                int category = askForCategory();
+                report.totalSpentSingleCategory(date1, date2, category);
+
+                print("");
+                mainMenu.printMainMenu();
                 break;
             }
             case 3:
             {
                 this.optionChosen = true;
                 print("");
-                print("List all");
+                int date1 = askForDate(1);
+                int date2 = askForDate(2);
+                report.listAll(date1, date2);
+
+                print("");
+                mainMenu.printMainMenu();
                 break;
             }
             case 4:
             {
                 this.optionChosen = true;
                 print("");
-                print("List all to a given recipient");
+                int date1 = askForDate(1);
+                int date2 = askForDate(2);
+                String recipient = askForRecipient();
+                report.listAllToRecipient(date1, date2, recipient);
+                print("");
+                mainMenu.printMainMenu();
                 break;
             }
             case 5:
             {
                 this.optionChosen = true;
                 print("");
-                MainMenu mainMenu = new MainMenu();
                 mainMenu.printMainMenu();
                 break;
             }
@@ -113,6 +141,95 @@ public class ReportMenu
                 print("");
                 break;
             }
+        }
+    }
+
+    /** Asks the user to input a date and returns the formatted int version of the date */
+    private int askForDate(int whichDate)
+    {
+        if(whichDate == 1)
+            System.out.println("Please enter the first date in the form dd/mm/yyyy");
+        else if(whichDate == 2)
+            System.out.println("Please enter the second date in the form dd/mm/yyyy");
+        else
+        {
+            System.out.println("ERROR: Date to ask for is neither 1st or 2nd");
+            return 0;
+        }
+
+        Scanner sc = new Scanner(System.in);
+        String date1UserInputted = sc.next();
+        print("");
+        return Transaction.convertDateToStorage(date1UserInputted);
+    }
+
+    /** Asks the user to input the name of a recipient and returns the String value of what the user inputted */
+    private String askForRecipient()
+    {
+        print("Please enter the recipient's name");
+        Scanner sc = new Scanner(System.in);
+        String recipient = sc.nextLine();
+
+        print("");
+        return recipient;
+    }
+
+    /** Asks the user to input the category they want and returns the int value of what the user inputted */
+    private int askForCategory()
+    {
+        this.optionChosen = false;
+        int category = 0;
+
+        while(!this.optionChosen)
+        {
+            print("Please enter the number which correlates to the category you wish to generate the report with");
+            print("1 - Rent");
+            print("2 - Electricity");
+            print("3 - ISP");
+            print("4 - Gas");
+            print("5 - Mobile Phone");
+            print("6 - Groceries");
+            print("7 - Entertainment");
+            print("8 - Eating Out");
+            print("9 - Public Transport");
+            print("10 - Car");
+
+            Scanner sc = new Scanner(System.in);
+            category = categoryInputHandler(sc);
+        }
+
+        print("");
+        return category;
+    }
+
+    /**
+     * Takes the user's input, if it's valid will return the int value of the category, otherwise prints an error and
+     * reprints the category list
+     * @param sc Scanner to use
+     */
+    private int categoryInputHandler(Scanner sc)
+    {
+        int selectedOption;
+        try
+        {
+            selectedOption = sc.nextInt();
+
+            if(selectedOption >= 1  && selectedOption <= 10)
+            {
+                this.optionChosen = true;
+                return selectedOption;
+            }else
+            {
+                print("ERROR: Please enter a valid option");
+                print("");
+                return 0;
+            }
+        } catch(InputMismatchException e)
+        {
+            e.getStackTrace();
+            print("ERROR: Please enter a valid option");
+            print("");
+            return 0;
         }
     }
 
