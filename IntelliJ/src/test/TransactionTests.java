@@ -18,6 +18,8 @@ public class TransactionTests
     {
         normalEntryConstructor1();
         normalEntryConstructor2();
+        userInputtedDateToStored();
+        storedDateToUserReadable();
     }
 
     /** Test for normal entry. Tests date reformatting and storage ability*/
@@ -44,6 +46,27 @@ public class TransactionTests
         test.ckEqualsI("Category: ", 1, transaction.getCategory());
         test.ckEqualsS("Recipient: ", "Stephen", transaction.getRecipient());
         test.ckEqualsD("Amount: ", 250.50, transaction.getAmount());
-        System.out.print("");
+        System.out.println("");
+    }
+
+    /** Test for converting user inputted date format to a format for storage (dd/mm/yyyy to yyyymmdd) */
+    private static void userInputtedDateToStored()
+    {
+        System.out.println("User Inputted Date to Storage Format");
+        Transaction transaction = new Transaction("14/03/2018", 1, "Stephen", 250.50);
+
+        test.ckEqualsI("Storage Formatted Date: ",20180314, transaction.convertDateToStorage("14/03/2018"));
+        System.out.println("");
+    }
+
+    /** Test for converting stored date format to a user readable format (yyyymmdd to dd/mm/yyyy) */
+    private static void storedDateToUserReadable()
+    {
+        System.out.println("Stored Date to User Readable Format");
+        Transaction transaction = new Transaction("14/03/2018", 1, "Stephen", 250.50);
+
+        String storedDate = Integer.toString(transaction.getDate());
+        test.ckEqualsS("User Readable Date: ","14/03/2018", transaction.convertDateToUserReadable(storedDate));
+        System.out.println("");
     }
 }
