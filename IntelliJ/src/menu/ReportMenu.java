@@ -6,6 +6,8 @@ import main.Transaction;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static main.Main.print;
+
 /** Report Menu User Interface */
 
 public class ReportMenu
@@ -158,9 +160,9 @@ public class ReportMenu
         }
 
         Scanner sc = new Scanner(System.in);
-        String date1UserInputted = sc.next();
+        String dateUserInputted = sc.next();
         print("");
-        return Transaction.convertDateToStorage(date1UserInputted);
+        return Transaction.convertDateToStorage(dateUserInputted);
     }
 
     /** Asks the user to input the name of a recipient and returns the String value of what the user inputted */
@@ -168,7 +170,7 @@ public class ReportMenu
     {
         print("Please enter the recipient's name");
         Scanner sc = new Scanner(System.in);
-        String recipient = sc.nextLine();
+        String recipient = sc.nextLine().trim();
 
         print("");
         return recipient;
@@ -209,10 +211,9 @@ public class ReportMenu
      */
     private int categoryInputHandler(Scanner sc)
     {
-        int selectedOption;
         try
         {
-            selectedOption = sc.nextInt();
+            int selectedOption = sc.nextInt();
 
             if(selectedOption >= 1  && selectedOption <= 10)
             {
@@ -231,14 +232,5 @@ public class ReportMenu
             print("");
             return 0;
         }
-    }
-
-    /**
-     * Prints a value to the console (Just System.out.println() but looks neater and is easier to type out
-     * @param message Message to print to the screen
-     */
-    private void print(String message)
-    {
-        System.out.println(message);
     }
 }

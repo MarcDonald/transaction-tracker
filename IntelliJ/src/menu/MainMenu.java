@@ -5,10 +5,14 @@ import main.Main;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static main.Main.print;
+
+
 /** Main Menu User Interface */
 
 public class MainMenu
 {
+    //Whether or not an option has been chosen. Used for reprinting the menu if an invalid option is chosen
     private boolean optionChosen;
 
     public MainMenu()
@@ -42,11 +46,9 @@ public class MainMenu
      */
     private void mainMenuInputHandler(Scanner sc)
     {
-        int selectedOption;
-
         try
         {
-            selectedOption = sc.nextInt();
+            int selectedOption = sc.nextInt();
 
             if(selectedOption >= 1 && selectedOption <= 3)
             {
@@ -60,7 +62,7 @@ public class MainMenu
             }
         } catch(InputMismatchException e)
         {
-            e.getStackTrace();
+            e.printStackTrace();
             print("ERROR: Please enter a valid option");
             print("");
         }
@@ -99,14 +101,5 @@ public class MainMenu
         {
             System.exit(1);
         }
-    }
-
-    /**
-     * Prints a value to the console (Just System.out.println() but looks neater and is easier to type out
-     * @param message Message to print to the screen
-     */
-    private void print(String message)
-    {
-        System.out.println(message);
     }
 }

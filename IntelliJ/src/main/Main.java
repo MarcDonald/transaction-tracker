@@ -6,8 +6,13 @@ import menu.MainMenu;
 
 public class Main
 {
+    //Contains all transactions that have been loaded in and new ones that are added
     public static Transaction[] transactions = new Transaction[100];
 
+    /**
+     * Main method which loads all data from the text file and prints the main menu to the console
+     * @param args Program Arguments
+     */
     public static void main(String args[])
     {
         MainMenu mainMenu = new MainMenu();
@@ -15,5 +20,14 @@ public class Main
 
         dataManager.loadData();
         mainMenu.printMainMenu();
+    }
+
+    /**
+     * Prints a value to the console (Just System.out.println() but looks neater and is easier to type out
+     * @param message Message to print to the screen
+     */
+    public static void print(String message)
+    {
+        System.out.println(message);
     }
 }

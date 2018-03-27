@@ -47,7 +47,7 @@ public class DataManager
             this.in = new Scanner(this.file);
         }catch(FileNotFoundException e)
         {
-            e.getStackTrace();
+            e.printStackTrace();
             System.out.println(e.getMessage());
             System.out.println("in " + System.getProperty("user.dir"));
             System.exit(-1);
@@ -88,7 +88,9 @@ public class DataManager
         }
     }
 
-    /** Separates the information in a record into formatted date, category, name, and amount */
+    /** Separates the information in a record into formatted date, category, name, and amount
+     * @param record Record to extract information from
+     */
     private void separateInformation(String record)
     {
         int comma1 = findComma(record, 1);
@@ -163,13 +165,19 @@ public class DataManager
         try
         {
             this.out = new PrintWriter(this.file);
-        }catch(Exception e)
+        }catch(FileNotFoundException e)
         {
-            e.getMessage();
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+            System.out.println("in " + System.getProperty("user.dir"));
+            System.exit(-1);
         }
     }
 
-    /** Creates a transaction in the format required for the text file */
+    /** Creates a transaction in the format required for the text file
+     * @param transaction Transaction to make the record from
+     * @return Record form of the transaction
+     */
     private String createRecord(Transaction transaction)
     {
         int dateI = transaction.getDate();

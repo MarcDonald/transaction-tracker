@@ -4,8 +4,12 @@ import main.DataManager;
 import main.Main;
 import main.Transaction;
 
+import java.text.NumberFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import static main.Main.print;
+
 
 /** Transaction Menu User Interface*/
 
@@ -23,6 +27,8 @@ public class TransactionMenu
 
         print("");
         print("NEW TRANSACTION");
+
+        //Allows the user to set the date of the transaction
         print("Please enter the date of the transaction in the form dd/mm/yyyy");
         String date = sc.next();
 
@@ -45,12 +51,16 @@ public class TransactionMenu
      */
     private void confirmInfoAndStore(String date)
     {
+        //Converts the amount into a currency
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        String amountCurrency = money.format(this.amount);
+
         print("");
         print("New transaction stored with the following details:");
         print("Date: " + date);
         print("Category: " + this.category);
         print("Recipient: " + this.name);
-        print("Amount: " + this.amount);
+        print("Amount: " + amountCurrency);
 
         Transaction transaction = new Transaction(date, this.category, this.name, this.amount);
 
@@ -107,11 +117,9 @@ public class TransactionMenu
      */
     private void categoryInputHandler(Scanner sc)
     {
-        int selectedOption;
-
         try
         {
-            selectedOption = sc.nextInt();
+            int selectedOption = sc.nextInt();
 
             if(selectedOption >= 1  && selectedOption <= 10)
             {
@@ -124,7 +132,7 @@ public class TransactionMenu
             }
         } catch(InputMismatchException e)
         {
-            e.getStackTrace();
+            e.printStackTrace();
             print("ERROR: Please enter a valid option");
             print("");
         }
@@ -151,17 +159,15 @@ public class TransactionMenu
      */
     private void amountInputHandler(Scanner sc)
     {
-        double amountEntered;
-
         try
         {
-            amountEntered = sc.nextDouble();
+            double amountEntered = sc.nextDouble();
             this.optionChosen = true;
             this.amount = amountEntered;
         } catch(InputMismatchException e)
         {
             e.getStackTrace();
-            print("ERROR: Please enter a valid option");
+            print("ERROR: Please enter a valid option, ensure that you are not including any currency symbols (e.g. £, $, €, etc)");
             print("");
         }
     }
@@ -200,14 +206,5 @@ public class TransactionMenu
             print("ERROR: Please enter a valid name");
             print("");
         }
-    }
-
-    /**
-     * Prints a value to the console (Just System.out.println() but looks neater and is easier to type out
-     * @param message Message to print to the screen
-     */
-    private void print(String message)
-    {
-        System.out.println(message);
     }
 }

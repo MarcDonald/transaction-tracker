@@ -1,13 +1,21 @@
 package main;
 
+import java.text.NumberFormat;
+import static main.Main.print;
+
 /** Generates a report of the user's choosing */
 
 public class Report
 {
+    private NumberFormat money = NumberFormat.getCurrencyInstance();
+
     public Report()
     {}
 
-    /** Generates a report of the total money spent between two dates supplied by the user */
+    /** Generates a report of the total money spent between two dates supplied by the user
+     * @param date1 First date
+     * @param date2 Second date
+     */
     public void totalSpent(int date1, int date2)
     {
         //Title
@@ -20,11 +28,17 @@ public class Report
         ifWithinDateRangeAddToArray(withinRange, date1, date2);
         double total = calculateTotal(withinRange);
 
+        String totalCurrency = money.format(total);
+
         //Prints the total amount spent
-        print("Amount spent: £" + total);
+        print("Amount spent: " + totalCurrency);
     }
 
-    /** Generates a report of the total money spent on a single category between two dates supplied by the user */
+    /** Generates a report of the total money spent on a single category between two dates supplied by the user
+     * @param date1 First date
+     * @param date2 Second date
+     * @param category Category to search for
+     */
     public void totalSpentSingleCategory(int date1, int date2, int category)
     {
         //Title
@@ -38,11 +52,16 @@ public class Report
         ifWithinDateRangeAndCorrectCategoryAddToArray(withinRange, date1, date2, category);
         double total = calculateTotal(withinRange);
 
+        String totalCurrency = money.format(total);
+
         //Prints the total amount spent
-        print("Amount spent: £" + total);
+        print("Amount spent: " + totalCurrency);
     }
 
-    /** Generates a list of all the transactions between two dates supplied by the user */
+    /** Generates a list of all the transactions between two dates supplied by the user
+     * @param date1 First date
+     * @param date2 Second date
+     */
     public void listAll(int date1, int date2)
     {
         //Title
@@ -58,7 +77,12 @@ public class Report
         //Prints each transaction individually
         printTransactions(withinRange);
     }
-    /** Generates a report listing all transactions to a recipient supplied by the user between two given dates */
+
+    /** Generates a report listing all transactions to a recipient supplied by the user between two given dates
+     * @param date1 First date
+     * @param date2 Second date
+     * @param recipient Recipient to search for
+     */
     public void listAllToRecipient(int date1, int date2, String recipient)
     {
         //Title
@@ -75,7 +99,10 @@ public class Report
         printTransactions(withinRange);
     }
 
-    /** Converts the int value of a category into the String name */
+    /** Converts the int value of a category into the String name
+     * @param categoryNo Integer value of the category
+     * @return Human readable name of the category
+     */
     private String categoryName(int categoryNo)
     {
         switch(categoryNo)
@@ -105,13 +132,20 @@ public class Report
         }
     }
 
-    /** Checks if a transaction is within the date range */
+    /** Checks if a transaction is within the date range
+     * @param item Transaction to check
+     * @param date1 First date
+     * @param date2 Second date
+     * @return Whether the transaction took place between the first date and the second date
+     */
     private boolean isWithinDateRange(Transaction item, int date1, int date2)
     {
         return ((item.getDate() >= date1) && (item.getDate() <= date2));
     }
 
-    /** Prints out the details of transactions within an array */
+    /** Prints out the details of transactions within an array
+     * @param transactions Transaction storage array
+     */
     private void printTransactions(Transaction[] transactions)
     {
         for(int i = 0; i < transactions.length; i++)
@@ -128,14 +162,18 @@ public class Report
                 print("Date: " + dateUserReadable);
                 print("Category: " + categoryName);
                 print("Recipient: " + transactions[i].getRecipient());
-                print("Amount: " + transactions[i].getAmount());
+                print("Amount: " + money.format(transactions[i].getAmount()));
                 print("---------------------------------");
             }
         }
     }
 
     /** For each index of Main.transactions, checks if it is null and if it isn't, checks if the date lies between
-     * the given dates. If it does, adds it to an array */
+     * the given dates. If it does, adds it to an array
+     * @param withinRange The array of transactions that are within range
+     * @param date1 First date
+     * @param date2 Second date
+     */
     private void ifWithinDateRangeAddToArray(Transaction[] withinRange, int date1, int date2)
     {
         int withinRangeCounter = 0;
@@ -154,7 +192,12 @@ public class Report
     }
 
     /** For each index of Main.transactions, checks if it is null and if it isn't, checks if the date lies between
-     * the given dates. If it does, checks if it is of the category the user entered. If it is adds it to an array */
+     * the given dates. If it does, checks if it is of the category the user entered. If it is adds it to an array
+     * @param withinRange The array of transactions that are within range
+     * @param date1 First date
+     * @param date2 Second date
+     * @param category Category to search for
+     */
     private void ifWithinDateRangeAndCorrectCategoryAddToArray(Transaction[] withinRange, int date1, int date2, int category)
     {
         int withinRangeCounter = 0;
@@ -176,7 +219,12 @@ public class Report
     }
 
     /** For each index of Main.transactions, checks if it is null and if it isn't, checks if the date lies between
-     *  the given dates. If it does, adds it to an array */
+     *  the given dates. If it does, adds it to an array
+     * @param withinRange The array of transactions that are within range
+     * @param date1 First date
+     * @param date2 Second date
+     * @param recipient Recipient to search for
+     */
     private void ifWithinDateRangeAndCorrectRecipientAddToArray(Transaction[] withinRange, int date1, int date2, String recipient)
     {
         int withinRangeCounter = 0;
@@ -197,7 +245,9 @@ public class Report
     }
 
     /** For each index in the withinRange array checks if it is null, if it isn't, gets the amount of the transaction
-     *  and then adds it onto the total amount */
+     *  and then adds it onto the total amount
+     * @param withinRange The array of transactions that are within range
+     */
     private double calculateTotal(Transaction[] withinRange)
     {
         double total = 0;
@@ -211,14 +261,5 @@ public class Report
             }
         }
         return total;
-    }
-
-    /**
-     * Prints a value to the console (Just System.out.println() but looks neater and is easier to type out
-     * @param message Message to print to the screen
-     */
-    private void print(String message)
-    {
-        System.out.println(message);
     }
 }
