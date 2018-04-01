@@ -81,7 +81,7 @@ public class MainMenu
             //Checks to see if there is any space left in the array to store a new transaction
             if(Main.transactions[99] != null)
             {
-                print("You have entered the maximum amount of transactions, new ones cannot be stored");
+                print("You have entered the maximum amount of transactions; new ones cannot be stored");
                 canStore = false;
                 print("");
                 printMainMenu();
