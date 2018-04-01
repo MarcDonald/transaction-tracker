@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.Scanner;
 
 /** Loads data from and stores data to a text file*/
-
 public class DataManager
 {
     private Scanner in = null;
@@ -14,7 +13,7 @@ public class DataManager
     private int category;
     private String name;
     private double amount;
-    private File file = new File("src/resources/TransactionDetails.txt");
+    private final File file = new File("src/resources/TransactionDetails.txt");
 
     public DataManager()
     {}

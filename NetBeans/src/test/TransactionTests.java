@@ -3,7 +3,6 @@ package test;
 import main.Transaction;
 
 /** Tests for the Transaction class */
-
 public class TransactionTests
 {
     private static final Test test = new Test();
