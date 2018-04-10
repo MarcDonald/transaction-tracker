@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c30391d-e67d-4333-a735-b4c023878af9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/TransactionDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/TransactionDetails.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TransactionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TransactionTests.java" afterDir="false" />
+    <list default="true" id="5c30391d-e67d-4333-a735-b4c023878af9" name="Default" comment="Added testing document and fixed a bit of grammar">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/resources/TransactionDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/resources/TransactionDetails.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NetBeans/src/menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/menu/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NetBeans/src/resources/TransactionDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/resources/TransactionDetails.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored mask="*.iml" />
@@ -45,11 +46,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/menu/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1547">
+              <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDetails.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/TransactionDetails.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DataManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/DataManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="833">
+              <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -64,6 +83,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cannot</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -77,15 +101,15 @@
         <option value="$PROJECT_DIR$/src/menu/Menu.java" />
         <option value="$PROJECT_DIR$/src/main/DataLoader.java" />
         <option value="$PROJECT_DIR$/src/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/menu/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/menu/TransactionMenu.java" />
         <option value="$PROJECT_DIR$/src/menu/ReportMenu.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/Report.java" />
-        <option value="$PROJECT_DIR$/src/resources/TransactionDetails.txt" />
         <option value="$PROJECT_DIR$/src/main/Transaction.java" />
         <option value="$PROJECT_DIR$/src/test/TransactionTests.java" />
         <option value="$PROJECT_DIR$/src/main/DataManager.java" />
+        <option value="$PROJECT_DIR$/src/menu/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/resources/TransactionDetails.txt" />
       </list>
     </option>
   </component>
@@ -99,7 +123,7 @@
     <option name="jreName" value="9" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-92" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -264,6 +288,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,7 +329,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,7 +340,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -445,6 +469,9 @@
       <workItem from="1522172043419" duration="38000" />
       <workItem from="1522172792534" duration="4062000" />
       <workItem from="1522607261930" duration="182000" />
+      <workItem from="1522608482084" duration="1880000" />
+      <workItem from="1522697359013" duration="389000" />
+      <workItem from="1523378393048" duration="167000" />
     </task>
     <task id="LOCAL-00001" summary="User interface implemented">
       <created>1520689292192</created>
@@ -537,11 +564,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522179168931</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added testing document and fixed a bit of grammar">
+      <created>1522610343232</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1522610343232</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39331000" />
+    <option name="totallyTimeSpent" value="41767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,7 +591,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32934782" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.32899022" />
       <window_info anchor="right" id="Maven Projects" order="2" />
@@ -566,7 +599,7 @@
       <window_info anchor="bottom" x="2010" y="359" width="704" height="418" id="Run" order="5" weight="0.31045753" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.13059701" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.1337953" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
@@ -574,16 +607,16 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.30869564" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="6" side_tool="true" weight="0.32995737" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="right" id="Commander" order="3" weight="0.4" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="6" side_tool="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32897604" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
       <window_info anchor="bottom" x="3121" y="72" width="704" height="418" id="Run" order="5" type="FLOATING" visible="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
@@ -594,14 +627,15 @@
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32934782" />
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.32934782" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.30869564" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32934782" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -625,7 +659,8 @@
     <MESSAGE value="Added date formatting methods and base for report generation" />
     <MESSAGE value="Added reports feature" />
     <MESSAGE value="Polish&#10;&#10;Added some more comments&#10;-Fixed some documentation comments&#10;-Edited some code to make it neater&#10;-Made print statement static in Main method rather than multiple copies&#10;of the same method in different classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Polish&#10;&#10;Added some more comments&#10;-Fixed some documentation comments&#10;-Edited some code to make it neater&#10;-Made print statement static in Main method rather than multiple copies&#10;of the same method in different classes" />
+    <MESSAGE value="Added testing document and fixed a bit of grammar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added testing document and fixed a bit of grammar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,13 +959,6 @@
         <state relative-caret-position="-1977" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/TransactionDetails.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -958,13 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -996,10 +1017,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/menu/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/TransactionDetails.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/DataManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="833">
+          <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
         </state>
       </provider>
     </entry>
