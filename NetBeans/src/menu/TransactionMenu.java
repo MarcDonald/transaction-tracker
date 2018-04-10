@@ -10,8 +10,8 @@ import java.util.Scanner;
 
 import static main.Main.print;
 
-
 /** Transaction Menu User Interface*/
+
 public class TransactionMenu
 {
     private int category;
@@ -64,14 +64,7 @@ public class TransactionMenu
         Transaction transaction = new Transaction(date, this.category, this.name, this.amount);
 
         //Add the transaction to the next available slot in the array
-        for(int i = 0; i < Main.transactions.length; i++)
-        {
-            if(Main.transactions[i] == null)
-            {
-                Main.transactions[i] = transaction;
-                break;
-            }
-        }
+        Main.transactions.addTransaction(transaction);
 
         //Store new information
         DataManager dataManager = new DataManager();

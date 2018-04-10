@@ -1,6 +1,7 @@
 package main;
 
 /** Transaction object that stores the details of each individual transaction */
+
 public class Transaction
 {
     private final int date;

@@ -74,16 +74,16 @@ public class DataManager
     /** Fills the transactions array with transaction objects made out of the information that has been loaded */
     private void fillTransactionsArray()
     {
-        for(int i = 0; i < Main.transactions.length; i++)
+        for(int i = 0; i < Main.transactions.getMaxSize(); i++)
         {
-            if((Main.transactions[i] == null) && (records[i] != null))
+            if((Main.transactions.isEmpty(i)) && (records[i] != null))
             {
                 String currentRecord = records[i];
                 separateInformation(currentRecord);
 
                 //Using constructor for already formatted date
                 Transaction transaction = new Transaction(this.category, this.name, this.amount, this.date);
-                Main.transactions[i] = transaction;
+                Main.transactions.addTransaction(transaction);
             }
         }
     }
@@ -134,27 +134,19 @@ public class DataManager
         switch(occurrence)
         {
             case 1:
-            {
-                commaIndex = record.indexOf(",");
+                commaIndex = record.indexOf(',');
                 break;
-            }
             case 2:
-            {
                 //Starts looking for the comma from the index of the first command, therefore finding the second comma
-                commaIndex = record.indexOf(",", (record.indexOf(",") + 1));
+                commaIndex = record.indexOf(',', (record.indexOf(',') + 1));
                 break;
-            }
             case 3:
-            {
-                int secondComma = record.indexOf(",", (record.indexOf(",") + 1));
-                commaIndex = record.indexOf(",", (secondComma + 1));
+                int secondComma = record.indexOf(',', (record.indexOf(',') + 1));
+                commaIndex = record.indexOf(',', (secondComma + 1));
                 break;
-            }
             default:
-            {
                 commaIndex = 0;
                 break;
-            }
         }
         return commaIndex;
     }
@@ -197,11 +189,11 @@ public class DataManager
     /** Stores all records in the file */
     private void storeNewRecordsInFile()
     {
-        for(int i = 0; i < Main.transactions.length; i++)
+        for(int i = 0; i < Main.transactions.getSize(); i++)
         {
-            if(Main.transactions[i] != null)
+            if(Main.transactions.getTransaction(i) != null)
             {
-                String record = createRecord(Main.transactions[i]);
+                String record = createRecord(Main.transactions.getTransaction(i));
                 out.println(record);
             }
         }

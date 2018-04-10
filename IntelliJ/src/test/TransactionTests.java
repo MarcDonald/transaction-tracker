@@ -4,23 +4,21 @@ import main.Transaction;
 
 /** Tests for the Transaction class */
 
-public class TransactionTests
+class TransactionTests
 {
     private static final Test test = new Test();
 
-    public static void main(String args[])
-    {
-        runTests();
-    }
-
     /** Runs all Transaction tests */
-    private static void runTests()
+    static void runTests()
     {
+        System.out.println("TRANSACTION TESTS");
+        System.out.println("----------------");
         normalEntryConstructor1();
         normalEntryConstructor2();
         userInputtedDateToStored();
         storedDateToUserReadableFromString();
         storedDateToUserReadableFromInt();
+        System.out.println("----------------");
     }
 
     /** Test for normal entry. Tests date reformatting and storage ability*/

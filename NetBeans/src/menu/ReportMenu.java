@@ -9,6 +9,7 @@ import java.util.Scanner;
 import static main.Main.print;
 
 /** Report Menu User Interface */
+
 public class ReportMenu
 {
     private boolean optionChosen;
