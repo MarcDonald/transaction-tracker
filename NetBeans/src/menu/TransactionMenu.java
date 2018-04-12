@@ -138,7 +138,7 @@ class TransactionMenu
 
         while(!this.optionChosen)
         {
-            print("Please enter the amount of the transaction without any currency symbols (e.g. £250.50 would be entered as 250.50)");
+            print("Please enter the amount of the transaction (e.g. £250.50 or 250.50)");
 
             Scanner sc = new Scanner(System.in);
             amountInputHandler(sc);
@@ -152,15 +152,23 @@ class TransactionMenu
      */
     private void amountInputHandler(Scanner sc)
     {
+        String amountS = sc.next().trim();
+        String amountSNoSymbol;
+
+        if(amountS.charAt(0) == '£')
+            amountSNoSymbol = amountS.substring(1);
+        else
+            amountSNoSymbol = amountS;
+
         try
         {
-            double amountEntered = sc.nextDouble();
+            double amountEntered = Double.parseDouble(amountSNoSymbol);
             this.optionChosen = true;
             this.amount = amountEntered;
         } catch(InputMismatchException e)
         {
             e.getStackTrace();
-            print("ERROR: Please enter a valid option, ensure that you are not including any currency symbols (e.g. £, $, €, etc)");
+            print("ERROR: Please enter a valid amount (e.g. £250.50 or 250.50)");
             print("");
         }
     }
