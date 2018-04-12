@@ -10,9 +10,10 @@ import java.util.Scanner;
 
 import static main.Main.print;
 
-/** Transaction Menu User Interface*/
+/** Transaction Menu User Interface */
 
-public class TransactionMenu
+//Only way to access this menu is through the main menu so it is package private
+class TransactionMenu
 {
     private int category;
     private double amount;
@@ -20,7 +21,7 @@ public class TransactionMenu
     private boolean optionChosen;
 
     /** Guides the user through adding a new transaction */
-    public void printTransactionMenu()
+    void printTransactionMenu()
     {
         Scanner sc = new Scanner(System.in);
 
@@ -64,7 +65,7 @@ public class TransactionMenu
         Transaction transaction = new Transaction(date, this.category, this.name, this.amount);
 
         //Add the transaction to the next available slot in the array
-        Main.transactions.addTransaction(transaction);
+        Main.transactions.add(transaction);
 
         //Store new information
         DataManager dataManager = new DataManager();

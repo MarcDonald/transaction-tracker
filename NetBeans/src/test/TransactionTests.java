@@ -32,7 +32,7 @@ class TransactionTests
         test.ckEqualsI("Category: ", 1, transaction.getCategory());
         test.ckEqualsS("Recipient: ", "Stephen", transaction.getRecipient());
         test.ckEqualsD("Amount: ", 250.50, transaction.getAmount());
-        System.out.println("");
+        System.out.println();
     }
 
     /** Test for normal entry using second constructor. Tests date storage for formatted date */
@@ -45,7 +45,7 @@ class TransactionTests
         test.ckEqualsI("Category: ", 1, transaction.getCategory());
         test.ckEqualsS("Recipient: ", "Stephen", transaction.getRecipient());
         test.ckEqualsD("Amount: ", 250.50, transaction.getAmount());
-        System.out.println("");
+        System.out.println();
     }
 
     /** Test for converting user inputted date format to a format for storage (dd/mm/yyyy to yyyymmdd) */
@@ -54,7 +54,7 @@ class TransactionTests
         System.out.println("User Inputted Date to Storage Format");
 
         test.ckEqualsI("Storage Formatted Date: ",20180314, Transaction.convertDateToStorage("14/03/2018"));
-        System.out.println("");
+        System.out.println();
     }
 
     /** Test for converting stored date format (String) to a user readable format (yyyymmdd to dd/mm/yyyy) */
@@ -63,7 +63,7 @@ class TransactionTests
         System.out.println("Stored Date to User Readable Format");
 
         test.ckEqualsS("User Readable Date: ","14/03/2018", Transaction.convertDateToUserReadable("20180314"));
-        System.out.println("");
+        System.out.println();
     }
 
     /** Test for converting stored date format (Int) to a user readable format (yyyymmdd to dd/mm/yyyy) */
@@ -72,6 +72,6 @@ class TransactionTests
         System.out.println("Stored Date to User Readable Format");
 
         test.ckEqualsS("User Readable Date: ","14/03/2018", Transaction.convertDateToUserReadable(20180314));
-        System.out.println("");
+        System.out.println();
     }
 }

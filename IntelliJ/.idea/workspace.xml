@@ -1,37 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c30391d-e67d-4333-a735-b4c023878af9" name="Default" comment="Added TransactionList class">
-      <change afterPath="$PROJECT_DIR$/src/lists/TransactionList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TransactionListTests.java" afterDir="false" />
+    <list default="true" id="5c30391d-e67d-4333-a735-b4c023878af9" name="Default" comment="Added RecordList class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/DataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/DataManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/Report.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/MainMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/TransactionMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/TransactionMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/resources/TransactionDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/resources/TransactionDetails.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/test/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/test/TransactionTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/test/TransactionTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/TransactionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/TransactionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/TransactionDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/TransactionDetails.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TransactionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TransactionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/main/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/main/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/main/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/main/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/main/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/menu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/menu/ReportMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/menu/ReportMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/menu/TransactionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/menu/TransactionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/resources/TransactionDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/resources/TransactionDetails.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/test/TransactionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/test/TransactionTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored mask="*.iml" />
@@ -62,32 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <file leaf-file-name="RecordListTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/RecordListTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/DataManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="114" column="46" lean-forward="true" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionDetails.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/TransactionDetails.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            <state relative-caret-position="173">
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -121,17 +76,20 @@
         <option value="$PROJECT_DIR$/src/main/DataLoader.java" />
         <option value="$PROJECT_DIR$/src/main/Transaction.java" />
         <option value="$PROJECT_DIR$/src/menu/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/menu/ReportMenu.java" />
-        <option value="$PROJECT_DIR$/src/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/test/Tests.java" />
-        <option value="$PROJECT_DIR$/src/test/TransactionTests.java" />
-        <option value="$PROJECT_DIR$/src/main/DataManager.java" />
         <option value="$PROJECT_DIR$/src/main/Report.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/Tests.java" />
+        <option value="$PROJECT_DIR$/src/test/AllTests.java" />
         <option value="$PROJECT_DIR$/src/lists/TransactionList.java" />
         <option value="$PROJECT_DIR$/src/test/TransactionListTests.java" />
-        <option value="$PROJECT_DIR$/src/menu/TransactionMenu.java" />
+        <option value="$PROJECT_DIR$/src/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/test/RecordListTests.java" />
+        <option value="$PROJECT_DIR$/src/lists/RecordList.java" />
         <option value="$PROJECT_DIR$/src/resources/TransactionDetails.txt" />
+        <option value="$PROJECT_DIR$/src/main/DataManager.java" />
+        <option value="$PROJECT_DIR$/src/menu/TransactionMenu.java" />
+        <option value="$PROJECT_DIR$/src/menu/ReportMenu.java" />
+        <option value="$PROJECT_DIR$/src/test/TransactionTests.java" />
       </list>
     </option>
   </component>
@@ -145,10 +103,10 @@
     <option name="jreName" value="9" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="93" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1264" />
+    <option name="height" value="837" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -309,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -357,6 +314,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +327,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -387,6 +345,17 @@
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
+    <configuration name="AllTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.AllTests" />
+      <module name="Semester 2 Assignment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="Semester 2 Assignment" />
@@ -394,17 +363,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="menu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="Tests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.Tests" />
-      <module name="Semester 2 Assignment" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -465,12 +423,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Tests" />
+      <item itemvalue="Application.AllTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Tests" />
+        <item itemvalue="Application.AllTests" />
       </list>
     </recent_temporary>
   </component>
@@ -502,7 +460,10 @@
       <workItem from="1522608482084" duration="1880000" />
       <workItem from="1522697359013" duration="389000" />
       <workItem from="1523378393048" duration="167000" />
-      <workItem from="1523378597470" duration="9178000" />
+      <workItem from="1523378597470" duration="9308000" />
+      <workItem from="1523388272455" duration="2389000" />
+      <workItem from="1523391462441" duration="83000" />
+      <workItem from="1523539290737" duration="3640000" />
     </task>
     <task id="LOCAL-00001" summary="User interface implemented">
       <created>1520689292192</created>
@@ -609,11 +570,25 @@
       <option name="project" value="LOCAL" />
       <updated>1523378859354</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added TransactionList class">
+      <created>1523388197995</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1523388197995</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added RecordList class">
+      <created>1523542916797</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1523542916797</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50945000" />
+    <option name="totallyTimeSpent" value="57187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -626,11 +601,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32934782" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32899022" />
       <window_info anchor="right" id="Maven Projects" order="2" />
@@ -639,21 +613,21 @@
       <window_info anchor="bottom" x="2010" y="359" width="704" height="418" id="Run" order="6" weight="0.33769062" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.13486141" />
-      <window_info anchor="bottom" id="SonarLint" order="0" weight="0.32897604" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.13539445" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.30869564" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.30827886" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="right" id="Commander" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info active="true" anchor="bottom" id="SonarLint" order="0" visible="true" weight="0.32897604" />
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,61 +677,24 @@
     <MESSAGE value="Added testing document and fixed a bit of grammar" />
     <MESSAGE value="Grammar fixes in Netbeans version" />
     <MESSAGE value="Added TransactionList class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TransactionList class" />
+    <MESSAGE value="Added RecordList class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added RecordList class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="14" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/Report.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#categoryName#0;class#Report#0" />
-            <element signature="method#isWithinDateRange#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAddToArray#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAndCorrectCategoryAddToArray#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAndCorrectRecipientAddToArray#0;class#Report#0" />
-            <element signature="method#calculateTotal#0;class#Report#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Report.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#categoryName#0;class#Report#0" />
-            <element signature="method#isWithinDateRange#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAddToArray#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAndCorrectCategoryAddToArray#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAndCorrectRecipientAddToArray#0;class#Report#0" />
-            <element signature="method#calculateTotal#0;class#Report#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Report.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#categoryName#0;class#Report#0" />
-            <element signature="method#isWithinDateRange#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAddToArray#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAndCorrectCategoryAddToArray#0;class#Report#0" />
-            <element signature="method#ifWithinDateRangeAndCorrectRecipientAddToArray#0;class#Report#0" />
-            <element signature="method#calculateTotal#0;class#Report#0" />
           </folding>
         </state>
       </provider>
@@ -974,95 +911,27 @@
         <state relative-caret-position="-1977" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/../NetBeans/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="455">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu/ReportMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/lists/RecordList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="549">
+          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lists/TransactionList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1346#1347#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1561#1562#0" expanded="true" />
-            <element signature="e#1676#1677#0" expanded="true" />
-            <element signature="e#1706#1707#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TransactionTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TransactionListTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu/TransactionMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Report.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="155" column="74" selection-start-line="155" selection-start-column="74" selection-end-line="155" selection-end-column="74" />
-          <folding>
-            <element signature="method#categoryName#0;class#Report#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="442">
+          <caret line="44" column="32" lean-forward="true" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1071,22 +940,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/DataManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="114" column="46" lean-forward="true" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
+        <state relative-caret-position="186">
+          <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../NetBeans/src/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="155" column="74" selection-start-line="155" selection-start-column="74" selection-end-line="155" selection-end-column="74" />
+          <folding>
+            <element signature="method#categoryName#0;class#Report#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#3150#3151#0" expanded="true" />
+            <element signature="e#3193#3194#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+            <element signature="e#3633#3634#0" expanded="true" />
+            <element signature="e#3677#3678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menu/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menu/TransactionMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="19" selection-start-line="14" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menu/ReportMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="80" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/AllTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/TransactionDetails.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="153">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/TransactionTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/TransactionListTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/RecordListTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
         </state>
       </provider>
     </entry>

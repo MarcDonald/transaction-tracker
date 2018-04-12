@@ -42,4 +42,13 @@ class Test
         else
             System.out.println("FAIL: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
     }
+
+    /** Check equals for null values */
+    void ckEqualsN(String message, Object expected, Object actual)
+    {
+        if(expected == actual)
+            System.out.println("PASS: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
+        else
+            System.out.println("FAIL: " + message + ". Expected value was " + expected + " and the actual value was " + actual);
+    }
 }

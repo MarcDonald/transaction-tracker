@@ -25,9 +25,9 @@ public class TransactionList
      * Adds a new transaction to the next available space in the list
      * @param transaction Transaction to add
      */
-    public void addTransaction(Transaction transaction)
+    public void add(Transaction transaction)
     {
-        if(this.size < 100)
+        if(this.size < this.maxSize)
         {
                 this.transactions[this.size] = transaction;
                 this.size++;
@@ -42,6 +42,12 @@ public class TransactionList
      */
     public Transaction getTransaction(int index)
     {
+        if(index > this.maxSize)
+        {
+            System.out.println("The number entered is larger than the maximum size of the list");
+            return null;
+        }
+
         if(isEmpty(index))
             System.out.println("No transaction found at index " + index);
         return this.transactions[index];

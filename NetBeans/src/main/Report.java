@@ -182,7 +182,7 @@ public class Report
             {
                 if(isWithinDateRange(Main.transactions.getTransaction(i), date1, date2))
                 {
-                    withinRange.addTransaction(Main.transactions.getTransaction(i));
+                    withinRange.add(Main.transactions.getTransaction(i));
                 }
             }
         }
@@ -207,7 +207,7 @@ public class Report
                 {
                     if(Main.transactions.getTransaction(i).getCategory() == category)
                     {
-                        withinRange.addTransaction(Main.transactions.getTransaction(i));
+                        withinRange.add(Main.transactions.getTransaction(i));
                     }
                 }
             }
@@ -233,7 +233,7 @@ public class Report
                 {
                     if(Main.transactions.getTransaction(i).getRecipient().equals(recipient))
                     {
-                        withinRange.addTransaction(Main.transactions.getTransaction(i));
+                        withinRange.add(Main.transactions.getTransaction(i));
                     }
                 }
             }

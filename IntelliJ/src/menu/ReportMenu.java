@@ -10,12 +10,13 @@ import static main.Main.print;
 
 /** Report Menu User Interface */
 
-public class ReportMenu
+//Only way to access this menu is through the main menu so it is package private
+class ReportMenu
 {
     private boolean optionChosen;
 
     /** Allows the user to select the type of report they would like to print */
-    public void printReportMenu()
+    void printReportMenu()
     {
         this.optionChosen = false;
 
