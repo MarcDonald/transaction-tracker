@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 import static main.Main.print;
 
-
 /** Main Menu User Interface */
 
 public class MainMenu
@@ -79,7 +78,7 @@ public class MainMenu
             boolean canStore = true;
 
             //Checks to see if there is any space left in the array to store a new transaction
-            if(Main.transactions[99] != null)
+            if(Main.transactions.getSize() >= 100)
             {
                 print("You have entered the maximum amount of transactions; new ones cannot be stored");
                 canStore = false;

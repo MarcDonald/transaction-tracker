@@ -1,6 +1,9 @@
 package main;
 
+import lists.TransactionList;
+
 import java.text.NumberFormat;
+
 import static main.Main.print;
 
 /** Generates a report of the user's choosing */
@@ -24,8 +27,7 @@ public class Report
         print("TOTAL AMOUNT SPENT BETWEEN " + date1UserReadable + " AND " + date2UserReadable);
 
         //Logic
-        Transaction[] withinRange = new Transaction[100];
-        ifWithinDateRangeAddToArray(withinRange, date1, date2);
+        TransactionList withinRange = ifWithinDateRangeAddToArray(date1, date2);
         double total = calculateTotal(withinRange);
 
         String totalCurrency = money.format(total);
@@ -48,8 +50,7 @@ public class Report
         print("TOTAL AMOUNT SPENT ON " + categoryName + " BETWEEN " + date1UserReadable + " AND " + date2UserReadable);
 
         //Logic
-        Transaction[] withinRange = new Transaction[100];
-        ifWithinDateRangeAndCorrectCategoryAddToArray(withinRange, date1, date2, category);
+        TransactionList withinRange = ifWithinDateRangeAndCorrectCategoryAddToArray(date1, date2, category);
         double total = calculateTotal(withinRange);
 
         String totalCurrency = money.format(total);
@@ -71,8 +72,7 @@ public class Report
         print("");
 
         //Logic
-        Transaction[] withinRange = new Transaction[100];
-        ifWithinDateRangeAddToArray(withinRange, date1, date2);
+        TransactionList withinRange = ifWithinDateRangeAddToArray(date1, date2);
 
         //Prints each transaction individually
         printTransactions(withinRange);
@@ -92,8 +92,7 @@ public class Report
         print("");
 
         //Logic
-        Transaction[] withinRange = new Transaction[100];
-        ifWithinDateRangeAndCorrectRecipientAddToArray(withinRange, date1, date2, recipient);
+        TransactionList withinRange = ifWithinDateRangeAndCorrectRecipientAddToArray(date1, date2, recipient);
 
         //Prints each transaction individually
         printTransactions(withinRange);
@@ -146,117 +145,115 @@ public class Report
     /** Prints out the details of transactions within an array
      * @param transactions Transaction storage array
      */
-    private void printTransactions(Transaction[] transactions)
+    private void printTransactions(TransactionList transactions)
     {
-        for(int i = 0; i < transactions.length; i++)
+        for(int i = 0; i < transactions.getMaxSize(); i++)
         {
-            if((i == 0) && transactions[i] == null)
+            if((i == 0) && transactions.isEmpty(i))
                 print("None found");
-            else if(transactions[i] != null)
+            else if(!transactions.isEmpty(i))
             {
-                String dateUserReadable = Transaction.convertDateToUserReadable(transactions[i].getDate());
-                String categoryName = categoryName(transactions[i].getCategory());
+                String dateUserReadable = Transaction.convertDateToUserReadable(transactions.getTransaction(i).getDate());
+                String categoryName = categoryName(transactions.getTransaction(i).getCategory());
                 int transactionNumber = i + 1;
 
                 print("Transaction " + transactionNumber + ":");
                 print("Date: " + dateUserReadable);
                 print("Category: " + categoryName);
-                print("Recipient: " + transactions[i].getRecipient());
-                print("Amount: " + money.format(transactions[i].getAmount()));
+                print("Recipient: " + transactions.getTransaction(i).getRecipient());
+                print("Amount: " + money.format(transactions.getTransaction(i).getAmount()));
                 print("---------------------------------");
             }
         }
     }
 
     /** For each index of Main.transactions, checks if it is null and if it isn't, checks if the date lies between
-     * the given dates. If it does, adds it to an array
-     * @param withinRange The array of transactions that are within range
+     * the given dates. If it does, adds it to a TransactionList
      * @param date1 First date
      * @param date2 Second date
+     * @return A list of transactions within the date range
      */
-    private void ifWithinDateRangeAddToArray(Transaction[] withinRange, int date1, int date2)
+    private TransactionList ifWithinDateRangeAddToArray(int date1, int date2)
     {
-        int withinRangeCounter = 0;
-
-        for(int i = 0; i < Main.transactions.length; i++)
+        TransactionList withinRange = new TransactionList();
+        for(int i = 0; i < Main.transactions.getMaxSize(); i++)
         {
-            if(Main.transactions[i] != null)
+            if(!Main.transactions.isEmpty(i))
             {
-                if(isWithinDateRange(Main.transactions[i], date1, date2))
+                if(isWithinDateRange(Main.transactions.getTransaction(i), date1, date2))
                 {
-                    withinRange[withinRangeCounter] = Main.transactions[i];
-                    withinRangeCounter++;
+                    withinRange.add(Main.transactions.getTransaction(i));
                 }
             }
         }
+        return withinRange;
     }
 
     /** For each index of Main.transactions, checks if it is null and if it isn't, checks if the date lies between
-     * the given dates. If it does, checks if it is of the category the user entered. If it is adds it to an array
-     * @param withinRange The array of transactions that are within range
+     * the given dates. If it does, checks if it is of the category the user entered. If it is adds it to a TransactionList
      * @param date1 First date
      * @param date2 Second date
      * @param category Category to search for
+     * @return TransactionList of transactions that are within the date range and are the appropriate category
      */
-    private void ifWithinDateRangeAndCorrectCategoryAddToArray(Transaction[] withinRange, int date1, int date2, int category)
+    private TransactionList ifWithinDateRangeAndCorrectCategoryAddToArray(int date1, int date2, int category)
     {
-        int withinRangeCounter = 0;
-
-        for(int i = 0; i < Main.transactions.length; i++)
+        TransactionList withinRange = new TransactionList();
+        for(int i = 0; i < Main.transactions.getMaxSize(); i++)
         {
-            if(Main.transactions[i] != null)
+            if(!Main.transactions.isEmpty(i))
             {
-                if(isWithinDateRange(Main.transactions[i], date1, date2))
+                if(isWithinDateRange(Main.transactions.getTransaction(i), date1, date2))
                 {
-                    if(Main.transactions[i].getCategory() == category)
+                    if(Main.transactions.getTransaction(i).getCategory() == category)
                     {
-                        withinRange[withinRangeCounter] = Main.transactions[i];
-                        withinRangeCounter++;
+                        withinRange.add(Main.transactions.getTransaction(i));
                     }
                 }
             }
         }
+        return withinRange;
     }
 
     /** For each index of Main.transactions, checks if it is null and if it isn't, checks if the date lies between
      *  the given dates. If it does, adds it to an array
-     * @param withinRange The array of transactions that are within range
      * @param date1 First date
      * @param date2 Second date
      * @param recipient Recipient to search for
+     * @return TransactionList of transactions within date range and appropriate recipient
      */
-    private void ifWithinDateRangeAndCorrectRecipientAddToArray(Transaction[] withinRange, int date1, int date2, String recipient)
+    private TransactionList ifWithinDateRangeAndCorrectRecipientAddToArray(int date1, int date2, String recipient)
     {
-        int withinRangeCounter = 0;
-        for(int i = 0; i < Main.transactions.length; i++)
+        TransactionList withinRange = new TransactionList();
+        for(int i = 0; i < Main.transactions.getMaxSize(); i++)
         {
-            if(Main.transactions[i] != null)
+            if(!Main.transactions.isEmpty(i))
             {
-                if(isWithinDateRange(Main.transactions[i], date1, date2))
+                if(isWithinDateRange(Main.transactions.getTransaction(i), date1, date2))
                 {
-                    if(Main.transactions[i].getRecipient().equals(recipient))
+                    if(Main.transactions.getTransaction(i).getRecipient().equals(recipient))
                     {
-                        withinRange[withinRangeCounter] = Main.transactions[i];
-                        withinRangeCounter++;
+                        withinRange.add(Main.transactions.getTransaction(i));
                     }
                 }
             }
         }
+        return withinRange;
     }
 
     /** For each index in the withinRange array checks if it is null, if it isn't, gets the amount of the transaction
      *  and then adds it onto the total amount
      * @param withinRange The array of transactions that are within range
      */
-    private double calculateTotal(Transaction[] withinRange)
+    private double calculateTotal(TransactionList withinRange)
     {
         double total = 0;
 
-        for(int i = 0; i < withinRange.length; i++)
+        for(int i = 0; i < withinRange.getMaxSize(); i++)
         {
-            if(withinRange[i] != null)
+            if(!withinRange.isEmpty(i))
             {
-                double amount = withinRange[i].getAmount();
+                double amount = withinRange.getTransaction(i).getAmount();
                 total = total + amount;
             }
         }
