@@ -47,7 +47,7 @@ public class RecordList
 
         //Checks if the index is empty, if it is it will display an error message and return null
         if(isEmpty(index))
-            System.out.println("No record found at index " + index);
+            Main.print("No record found at index " + index);
         return this.records[index];
     }
 
@@ -112,8 +112,8 @@ public class RecordList
             categoryI = Integer.parseInt(categoryS);
         }catch(NumberFormatException e)
         {
-            System.out.println("Number Format Exception");
-            System.out.println(e.getMessage());
+            Main.print("Number Format Exception");
+            Main.print(e.getMessage());
         }
         return categoryI;
     }
@@ -145,8 +145,8 @@ public class RecordList
             amountD = Double.parseDouble(amountS);
         }catch(NumberFormatException e)
         {
-            System.out.println("Number Format Exception");
-            System.out.println(e.getMessage());
+            Main.print("Number Format Exception");
+            Main.print(e.getMessage());
         }
         return amountD;
     }
@@ -198,7 +198,7 @@ public class RecordList
     {
         if(index > this.maxSize)
         {
-            System.out.println("The number entered is larger than the maximum size of the list");
+            Main.print("The number entered is larger than the maximum size of the list");
             return true;
         }else
             return false;

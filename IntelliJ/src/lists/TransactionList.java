@@ -44,12 +44,12 @@ public class TransactionList
     {
         if(index > this.maxSize)
         {
-            System.out.println("The number entered is larger than the maximum size of the list");
+            Main.print("The number entered is larger than the maximum size of the list");
             return null;
         }
 
         if(isEmpty(index))
-            System.out.println("No transaction found at index " + index);
+            Main.print("No transaction found at index " + index);
         return this.transactions[index];
     }
 

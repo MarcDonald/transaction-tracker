@@ -8,3 +8,4 @@
 20180420,6,Tesco,41.99
 20180415,10,Shell Stn Petrol,35.0
 20180430,10,Shell Stn Petrol,27.0
+20010101,3,kjrsngf,2500.0

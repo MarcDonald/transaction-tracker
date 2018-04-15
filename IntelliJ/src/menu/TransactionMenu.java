@@ -125,7 +125,6 @@ class TransactionMenu
             }
         } catch(InputMismatchException e)
         {
-            e.printStackTrace();
             print("ERROR: Please enter a valid option");
             print("");
         }
@@ -155,7 +154,8 @@ class TransactionMenu
         String amountS = sc.next().trim();
         String amountSNoSymbol;
 
-        if(amountS.charAt(0) == '£')
+        //Using '£' works in other IDEs but '�' is needed for Netbeans
+        if(amountS.charAt(0) == '£' || amountS.charAt(0) == '�')
             amountSNoSymbol = amountS.substring(1);
         else
             amountSNoSymbol = amountS;
@@ -167,7 +167,6 @@ class TransactionMenu
             this.amount = amountEntered;
         } catch(InputMismatchException e)
         {
-            e.getStackTrace();
             print("ERROR: Please enter a valid amount (e.g. £250.50 or 250.50)");
             print("");
         }
@@ -195,12 +194,12 @@ class TransactionMenu
     private void nameInputHandler(Scanner sc)
     {
         //Stores the whole line as the name (so that there can be spaces e.g. John Smith)
-        String name = sc.nextLine().trim();
+        String nameInput = sc.nextLine().trim();
 
         //Makes sure the name entered is non-empty
-        if(!name.equals(""))
+        if(!nameInput.equals(""))
         {
-            this.name = name;
+            this.name = nameInput;
             this.optionChosen = true;
         }else
         {

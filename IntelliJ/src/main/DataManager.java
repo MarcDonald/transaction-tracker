@@ -56,8 +56,8 @@ public class DataManager
         }catch(FileNotFoundException e)
         {
             e.printStackTrace();
-            System.out.println(e.getMessage());
-            System.out.println("in " + System.getProperty("user.dir"));
+            Main.print(e.getMessage());
+            Main.print("in " + System.getProperty("user.dir"));
             System.exit(-1);
         }
     }
@@ -109,8 +109,8 @@ public class DataManager
         }catch(FileNotFoundException e)
         {
             e.printStackTrace();
-            System.out.println(e.getMessage());
-            System.out.println("in " + System.getProperty("user.dir"));
+            Main.print(e.getMessage());
+            Main.print("in " + System.getProperty("user.dir"));
             System.exit(-1);
         }
     }

@@ -1,5 +1,6 @@
 package menu;
 
+import main.Main;
 import main.Report;
 import main.Transaction;
 
@@ -151,12 +152,12 @@ class ReportMenu
     private int askForDate(int whichDate)
     {
         if(whichDate == 1)
-            System.out.println("Please enter the first date in the form dd/mm/yyyy");
+            Main.print("Please enter the first date in the form dd/mm/yyyy");
         else if(whichDate == 2)
-            System.out.println("Please enter the second date in the form dd/mm/yyyy");
+            Main.print("Please enter the second date in the form dd/mm/yyyy");
         else
         {
-            System.out.println("ERROR: Date to ask for is neither 1st or 2nd");
+            Main.print("ERROR: Date to ask for is neither 1st or 2nd");
             return 0;
         }
 
