@@ -61,9 +61,8 @@ class ReportMenu
                 print("ERROR: Please enter a valid option");
                 print("");
             }
-        }catch(InputMismatchException e)
+        }catch(Exception e)
         {
-            e.getStackTrace();
             print("ERROR: Please enter a valid option");
             print("");
         }
@@ -227,9 +226,8 @@ class ReportMenu
                 print("");
                 return 0;
             }
-        } catch(InputMismatchException e)
+        } catch(Exception e)
         {
-            e.getStackTrace();
             print("ERROR: Please enter a valid option");
             print("");
             return 0;

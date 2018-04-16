@@ -5,7 +5,6 @@ import main.Main;
 import main.Transaction;
 
 import java.text.NumberFormat;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static main.Main.print;
@@ -123,7 +122,7 @@ class TransactionMenu
                 print("ERROR: Please enter a valid option");
                 print("");
             }
-        } catch(InputMismatchException e)
+        } catch(Exception e)
         {
             print("ERROR: Please enter a valid option");
             print("");
@@ -165,7 +164,7 @@ class TransactionMenu
             double amountEntered = Double.parseDouble(amountSNoSymbol);
             this.optionChosen = true;
             this.amount = amountEntered;
-        } catch(InputMismatchException e)
+        } catch(Exception e)
         {
             print("ERROR: Please enter a valid amount (e.g. £250.50 or 250.50)");
             print("");

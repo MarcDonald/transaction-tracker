@@ -59,9 +59,8 @@ public class MainMenu
                 print("ERROR: Please enter a valid option");
                 print("");
             }
-        } catch(InputMismatchException e)
+        } catch(Exception e)
         {
-            e.printStackTrace();
             print("ERROR: Please enter a valid option");
             print("");
         }

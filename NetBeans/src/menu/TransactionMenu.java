@@ -5,7 +5,6 @@ import main.Main;
 import main.Transaction;
 
 import java.text.NumberFormat;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static main.Main.print;
@@ -123,7 +122,7 @@ class TransactionMenu
                 print("ERROR: Please enter a valid option");
                 print("");
             }
-        } catch(InputMismatchException e)
+        } catch(Exception e)
         {
             print("ERROR: Please enter a valid option");
             print("");
@@ -165,7 +164,7 @@ class TransactionMenu
             double amountEntered = Double.parseDouble(amountSNoSymbol);
             this.optionChosen = true;
             this.amount = amountEntered;
-        } catch(InputMismatchException e)
+        } catch(Exception e)
         {
             print("ERROR: Please enter a valid amount (e.g. £250.50 or 250.50)");
             print("");
@@ -187,16 +186,16 @@ class TransactionMenu
     }
 
     /**
-     * Takes the user's input, if it's non-empty will set the nameInput to the input, otherwise prints an error and asks the
- user to re-enter the nameInput
+     * Takes the user's input, if it's non-empty will set the name to the input, otherwise prints an error and asks the
+     * user to re-enter the name
      * @param sc Scanner to use
      */
     private void nameInputHandler(Scanner sc)
     {
-        //Stores the whole line as the nameInput (so that there can be spaces e.g. John Smith)
+        //Stores the whole line as the name (so that there can be spaces e.g. John Smith)
         String nameInput = sc.nextLine().trim();
 
-        //Makes sure the nameInput entered is non-empty
+        //Makes sure the name entered is non-empty
         if(!nameInput.equals(""))
         {
             this.name = nameInput;
