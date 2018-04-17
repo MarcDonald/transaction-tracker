@@ -55,7 +55,6 @@ public class DataManager
             this.in = new Scanner(this.file);
         }catch(FileNotFoundException e)
         {
-            e.printStackTrace();
             Main.print(e.getMessage());
             Main.print("in " + System.getProperty("user.dir"));
             System.exit(-1);
@@ -108,7 +107,6 @@ public class DataManager
             this.out = new PrintWriter(this.file);
         }catch(FileNotFoundException e)
         {
-            e.printStackTrace();
             Main.print(e.getMessage());
             Main.print("in " + System.getProperty("user.dir"));
             System.exit(-1);

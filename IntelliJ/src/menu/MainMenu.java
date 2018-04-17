@@ -2,7 +2,6 @@ package menu;
 
 import main.Main;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static main.Main.print;
@@ -72,32 +71,34 @@ public class MainMenu
      */
     private void performMainMenuAction(int option)
     {
-        if(option == 1)
+        switch (option) 
         {
-            boolean canStore = true;
-
-            //Checks to see if there is any space left in the array to store a new transaction
-            if(Main.transactions.getSize() >= 100)
-            {
-                print("You have entered the maximum amount of transactions; new ones cannot be stored");
-                canStore = false;
-                print("");
-                printMainMenu();
-            }
-
-            if(canStore)
-            {
-                TransactionMenu tm = new TransactionMenu();
-                tm.printTransactionMenu();
-            }
-        }
-        else if(option == 2)
-        {
-            ReportMenu rm = new ReportMenu();
-            rm.printReportMenu();
-        }else if(option == 3)
-        {
-            System.exit(1);
+            case 1:
+                boolean canStore = true;
+                
+                //Checks to see if there is any space left in the array to store a new transaction
+                if(Main.transactions.getSize() >= 100)
+                {
+                    print("You have entered the maximum amount of transactions; new ones cannot be stored");
+                    canStore = false;
+                    print("");
+                    printMainMenu();
+                }
+                
+                if(canStore)
+                {
+                    TransactionMenu tm = new TransactionMenu();
+                    tm.printTransactionMenu();
+                }   
+                break;
+            case 2:
+                ReportMenu rm = new ReportMenu();
+                rm.printReportMenu();
+                break;
+            case 3:
+                System.exit(1);
+            default:
+                break;
         }
     }
 }

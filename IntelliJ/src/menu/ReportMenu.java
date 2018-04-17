@@ -4,7 +4,6 @@ import main.Main;
 import main.Report;
 import main.Transaction;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static main.Main.print;
@@ -150,14 +149,17 @@ class ReportMenu
     /** Asks the user to input a date and returns the formatted int version of the date */
     private int askForDate(int whichDate)
     {
-        if(whichDate == 1)
-            Main.print("Please enter the first date in the form dd/mm/yyyy");
-        else if(whichDate == 2)
-            Main.print("Please enter the second date in the form dd/mm/yyyy");
-        else
+        switch (whichDate) 
         {
-            Main.print("ERROR: Date to ask for is neither 1st or 2nd");
-            return 0;
+            case 1:
+                Main.print("Please enter the first date in the form dd/mm/yyyy");
+                break;
+            case 2:
+                Main.print("Please enter the second date in the form dd/mm/yyyy");
+                break;
+            default:
+                Main.print("ERROR: Date to ask for is neither 1st or 2nd");
+                return 0;
         }
 
         Scanner sc = new Scanner(System.in);

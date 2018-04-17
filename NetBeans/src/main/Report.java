@@ -10,7 +10,7 @@ import static main.Main.print;
 
 public class Report
 {
-    private NumberFormat money = NumberFormat.getCurrencyInstance();
+    private final NumberFormat money = NumberFormat.getCurrencyInstance();
 
     public Report()
     {}

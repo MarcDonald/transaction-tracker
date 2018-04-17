@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c30391d-e67d-4333-a735-b4c023878af9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/DataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/main/DataManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/ReportMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/ReportMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/TransactionMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/menu/TransactionMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semester 2 Assignment/resources/TransactionDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semester 2 Assignment/resources/TransactionDetails.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lists/RecordList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lists/RecordList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lists/TransactionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lists/TransactionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/ReportMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/ReportMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/TransactionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/TransactionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/lists/RecordList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/lists/RecordList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/lists/TransactionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/lists/TransactionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/main/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/menu/ReportMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/menu/ReportMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NetBeans/src/menu/TransactionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans/src/menu/TransactionMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Program Testing.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Program Testing.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored mask="*.iml" />
@@ -50,8 +36,8 @@
       <file leaf-file-name="TransactionMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/menu/TransactionMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="374">
+              <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -481,7 +467,7 @@
       <workItem from="1523391462441" duration="83000" />
       <workItem from="1523539290737" duration="3640000" />
       <workItem from="1523542966767" duration="1028000" />
-      <workItem from="1523795604722" duration="1651000" />
+      <workItem from="1523795604722" duration="1724000" />
     </task>
     <task id="LOCAL-00001" summary="User interface implemented">
       <created>1520689292192</created>
@@ -623,11 +609,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523543643189</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Finishing touches and more tests">
+      <created>1523797321718</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1523797321718</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59866000" />
+    <option name="totallyTimeSpent" value="59939000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -640,7 +633,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32934782" />
@@ -651,7 +643,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32897604" />
-      <window_info anchor="bottom" x="2010" y="359" width="704" height="418" id="Run" order="6" visible="true" weight="0.33769062" />
+      <window_info anchor="bottom" x="2010" y="359" width="704" height="418" id="Run" order="6" weight="0.33769062" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info id="Designer" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49891067" visible="true" weight="0.1380597" />
@@ -719,7 +711,10 @@
     <MESSAGE value="Added TransactionList class" />
     <MESSAGE value="Added RecordList class" />
     <MESSAGE value="Added ability to enter amount with a currency symbol" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ability to enter amount with a currency symbol" />
+    <MESSAGE value="Finishing touches and more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing touches and more tests" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1088,8 +1083,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menu/TransactionMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="374">
+          <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
         </state>
       </provider>
     </entry>
