@@ -1,19 +1,0 @@
-
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ
-Xsquid:HiddenFieldCheck"8Rename "date" which hides the field declared at line 13.(ñ³ñï
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-]squid:HiddenFieldCheck"8Rename "name" which hides the field declared at line 15.(‡ÚóÇüÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿïöù8•©‹„«,
-]squid:HiddenFieldCheck"8Rename "name" which hides the field declared at line 15.(ñ¤¢€üÿÿÿÿ
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(†ô±‰
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ž­¼ç
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿïöù

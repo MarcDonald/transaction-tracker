@@ -1,21 +1,0 @@
-
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(„‰¤Ï
-ksquid:S1192"VDefine a constant instead of duplicating this literal ". Expected value was " 8 times.(„‰¤Ï
-psquid:S1192"[Define a constant instead of duplicating this literal " and the actual value was " 8 times.(„‰¤Ï
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(›’Éù
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(„‰¤Ï
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(„‰¤Ï
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(›’Éù
-\squid:S1192"GDefine a constant instead of duplicating this literal "PASS: " 4 times.(„‰¤Ï
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(›’Éù
-\squid:S1192"GDefine a constant instead of duplicating this literal "FAIL: " 4 times.(›’Éù
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(„‰¤Ï
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(›’Éù
